@@ -28,7 +28,7 @@ AFRAME.registerComponent('move-head', {
 
 AFRAME.registerComponent('move-nose', {
     schema: {
-      toPosition: {default: '2 2 -8'},
+      toPosition: {default: '1.9 2 -8'},
       toRotation:{default: '90 0 0'}
     },
     init: function () {
@@ -37,6 +37,36 @@ AFRAME.registerComponent('move-nose', {
         if(headMoved === true){
             this.setAttribute('position', data.toPosition);
             this.setAttribute('rotation', data.toRotation);
+        }
+      });
+    }
+});
+
+
+AFRAME.registerComponent('move-left-eye', {
+    schema: {
+      toPosition: {default: '1.5 2.2 -8.4'}
+    },
+    init: function () {
+      var data = this.data;
+      this.el.addEventListener('mouseenter', function () {
+        if(headMoved === true){
+            this.setAttribute('position', data.toPosition);
+        }
+      });
+    }
+});
+
+
+AFRAME.registerComponent('move-right-eye', {
+    schema: {
+      toPosition: {default: '2.3 2.2 -8.2'}
+    },
+    init: function () {
+      var data = this.data;
+      this.el.addEventListener('mouseenter', function () {
+        if(headMoved === true){
+            this.setAttribute('position', data.toPosition);
         }
       });
     }

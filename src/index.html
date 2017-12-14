@@ -17,8 +17,8 @@
       <p id="instructions">Use the central cursor to hover over the snowman's parts and attach them to his body. <br>You might want to start with his head.</p>
       <button id="start-button">Start</button>
     </div>
-    <div class="game">
-      <a-scene> 
+
+      <a-scene class="game"> 
 <!--         <a-assets>
           <img id="sky" src="test.png">
         </a-assets> -->
@@ -26,10 +26,13 @@
         <a-sphere id='snowman-body' position="2 -0.2 -9" radius="1.7" color="#ffffff"></a-sphere>
         <a-sphere id='snowman-head' position="-3 -0.5 -7" radius="0.8" color="#ffffff" move-head></a-sphere>
         <a-cone id="snowman-nose" position="5 -0.5 -7" color="tomato" radius-bottom="0.1" radius-top="0" rotation="-90 10 0" move-nose></a-cone>
+        <!-- <a-cylinder color="black" height="1.1" radius="0.5" position="8 -0.5 -12"></a-cylinder>
+        <a-circle radius="0.8" color="black" position="8 -1 -12" rotation="-90 0 0"></a-circle> -->
+        <a-sphere id='snowman-left-eye' position="-1 -0.5 -5" radius="0.1" color="#222222" move-left-eye></a-sphere>
+        <a-sphere id='snowman-right-eye' position="3.5 -0.5 -6" radius="0.1" color="#222222" move-right-eye></a-sphere>
         <a-plane color='#dadadb' height="100" width="100" rotation="-90 0 0" position="0 -1.5 0"></a-plane>
         <a-camera>
           <a-cursor color='#ff3557'></a-cursor>
         </a-camera>
       </a-scene>
-    </div>
 </html>
