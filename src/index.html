@@ -19,9 +19,10 @@
     </div>
 
       <a-scene class="game"> 
-<!--         <a-assets>
-          <img id="sky" src="test.png">
-        </a-assets> -->
+        <a-assets>
+           <a-asset-item id="hat-obj" src="./assets/tophat.obj"></a-asset-item>
+            <a-asset-item id="hat-mtl" src="./assets/tophat.mtl"></a-asset-item>
+        </a-assets>
         <a-sky color="#2f167f"></a-sky>
         <a-sphere id='snowman-body' position="2 -0.2 -9" radius="1.7" color="#ffffff"></a-sphere>
         <a-sphere id='snowman-head' position="-3 -0.5 -7" radius="0.8" color="#ffffff" move-head></a-sphere>
@@ -30,6 +31,10 @@
         <a-circle radius="0.8" color="black" position="8 -1 -12" rotation="-90 0 0"></a-circle> -->
         <a-sphere id='snowman-left-eye' position="-1 -0.5 -5" radius="0.1" color="#222222" move-left-eye></a-sphere>
         <a-sphere id='snowman-right-eye' position="3.5 -0.5 -6" radius="0.1" color="#222222" move-right-eye></a-sphere>
+       <!--  <a-gltf-model src="./assets/tophat.gltf" scale="0.01 0.01 0.01" position="-1 -0.5 -5"></a-gltf-model> -->
+       <a-entity position="-2 -0.5 -13" rotation="0 180 0" move-hat>
+        <a-obj-model src="#hat-obj" mtl="#hat-mtl" scale="0.01 0.01 0.01" side="double"></a-obj-model>
+      </a-entity>
         <a-plane color='#dadadb' height="100" width="100" rotation="-90 0 0" position="0 -1.5 0"></a-plane>
         <a-camera>
           <a-cursor color='#ff3557'></a-cursor>

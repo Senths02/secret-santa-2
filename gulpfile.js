@@ -44,9 +44,9 @@ gulp.task('vendor', function() {
     .pipe(gulp.dest('dist/vendor'))
 });
 
-gulp.task('img', function() {
-  return gulp.src(['src/img/**/*'])
-    .pipe(gulp.dest('dist/img'))
+gulp.task('assets', function() {
+  return gulp.src(['src/assets/**/*'])
+    .pipe(gulp.dest('dist/assets'))
 });
 
 gulp.task('serve', function() {
@@ -64,7 +64,7 @@ gulp.task('serve', function() {
     // Watch libs files
     gulp.watch('src/vendor/*.js', ['vendor']);
         // Watch img files
-    gulp.watch('src/img/*', ['img']);
+    gulp.watch('src/assets/*', ['assets']);
 
     gulp.watch(['dist/**']).on('change', browserSync.reload);
 });
@@ -74,5 +74,5 @@ gulp.task('clean', function() {
 });
 
 gulp.task('default', ['clean'], function() {
-    gulp.start('styles', 'scripts', 'vendor', 'img', 'html')
+    gulp.start('styles', 'scripts', 'vendor', 'assets', 'html')
 });

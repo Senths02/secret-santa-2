@@ -71,3 +71,17 @@ AFRAME.registerComponent('move-right-eye', {
       });
     }
 });
+
+    AFRAME.registerComponent('move-hat', {
+    schema: {
+      toPosition: {default: '2 2.95 -9'}
+    },
+    init: function () {
+      var data = this.data;
+      this.el.addEventListener('mouseenter', function () {
+        if(headMoved === true){
+            this.setAttribute('position', data.toPosition);
+        }
+      });
+    }
+});
