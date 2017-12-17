@@ -27,6 +27,7 @@ p {
 
 .game{
 	display:none;
+	position: static;
 }
 
 button{
